@@ -13,6 +13,12 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
 /* Generales */
 
 html {
@@ -31,8 +37,10 @@ body {
         opacity: 0;
         animation-timing-function: ease-in;
     }
-    25% {
+    12% {
         opacity: 1;
+    }
+    25% {
         transform: scale(1.2);
     } 
     75% {
@@ -48,7 +56,9 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: black;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     overflow: hidden;
 }
 
@@ -90,15 +100,72 @@ body {
     height: auto;
 }
 
+.hero .hero-down {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+    opacity: 1;
+    width: 5%;
+    height: auto;
+}
+
+@keyframes intermitente {
+    0% {opacity: 1}
+    50% {opacity: 0.2}
+    100% {opacity: 1}
+}
+
+.hero .hero-down img {
+    width: 100%;
+    height: auto;
+    animation: intermitente infinite 2.5s;
+}
+
 /* Header */
 
 header {
     background-color: white;
     box-shadow: 1.5px 1.5px 4px rgb(179, 179, 179);
     height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header.white {
+    background-color: transparent;
+    box-shadow: none;
 }
 
 header img {
     height: 60px;
     width: auto;
+}
+
+header nav a {
+    margin-left: 1em;
+    transition: 300ms ease-in-out;
+}
+
+header.white nav a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+header nav a.activo,
+header nav a:hover {
+    color: #a97c50;
+    font-weight: bold;
+}
+
+header.white nav a.activo,
+header.white nav a:hover {
+    color: white;
 }
