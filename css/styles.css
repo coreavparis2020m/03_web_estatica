@@ -189,6 +189,48 @@ header.white nav a:hover {
     color: white;
 }
 
+@media (max-width: 620px) {
+
+    header {
+        justify-content: flex-end;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+/* Burger */
+
+#burger {
+    position: fixed;
+    top: 24px;
+    left: 16px;
+    z-index: 3;
+}
+
+.barra {
+    width: 30px;
+    height: 2px;
+    margin: 6px;
+    background-color: #a97c50;
+    transition: all 700ms ease-in-out;
+}
+
+#burger.abierto .barra.arriba {
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+#burger.abierto .barra.media {
+    width: 0;
+}
+
+#burger.abierto .barra.abajo {
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+
+
+
 /* Menú */
 
 .menu {
@@ -197,7 +239,7 @@ header.white nav a:hover {
     background-color: #424242;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -360px;
     z-index: 2;
     display: flex;
     flex-direction: column;
