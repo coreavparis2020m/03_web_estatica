@@ -157,11 +157,28 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    transition: all 500ms ease-in-out;
 }
 
 header.white {
     background-color: transparent;
     box-shadow: none;
+}
+
+header img.white {
+    display: none;
+}
+
+header img.normal {
+    display: block;
+}
+
+header.white img.white {
+    display: block;
+}
+
+header.white img.normal {
+    display: none;
 }
 
 header img {
@@ -189,17 +206,6 @@ header.white nav a:hover {
     color: white;
 }
 
-@media (max-width: 620px) {
-
-    header {
-        justify-content: flex-end;
-    }
-
-    header nav {
-        display: none;
-    }
-}
-
 /* Burger */
 
 #burger {
@@ -207,6 +213,8 @@ header.white nav a:hover {
     top: 24px;
     left: 16px;
     z-index: 3;
+    cursor: pointer;
+    display: none;
 }
 
 .barra {
@@ -215,6 +223,10 @@ header.white nav a:hover {
     margin: 6px;
     background-color: #a97c50;
     transition: all 700ms ease-in-out;
+}
+
+#burger.abierto .barra {
+    background-color: white;
 }
 
 #burger.abierto .barra.arriba {
@@ -229,7 +241,20 @@ header.white nav a:hover {
     transform: translateY(-8px) rotateZ(-45deg);
 }
 
+@media (max-width: 620px) {
 
+    header {
+        justify-content: flex-end;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #burger {
+        display: block;
+    }
+}
 
 /* Menú */
 
@@ -244,6 +269,11 @@ header.white nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 700ms all ease-in-out;
+}
+
+.menu.abierto {
+    left: 0;
 }
 
 .menu nav {
@@ -256,6 +286,7 @@ header.white nav a:hover {
 .menu nav a {
     padding: 0.6em 0;
     color: rgba(255, 255, 255, 0.9);
+    transform: translateX(-360px);
 }
 
 .menu nav a.activo,
@@ -268,7 +299,43 @@ header.white nav a:hover {
     background-color: rgba(255, 255, 255, 0.9);
     height: 0.5px;
     width: 50%;
+    transform: translateX(-360px);
 }
+
+.menu nav a:nth-child(1) {
+    transition: transform 700ms ease-in-out;
+}
+
+.menu nav hr:nth-child(2) {
+    transition: transform 850ms ease-in-out;
+}
+
+.menu nav a:nth-child(3) {
+    transition: transform 1000ms ease-in-out;
+}
+
+.menu nav hr:nth-child(4) {
+    transition: transform 1150ms ease-in-out;
+}
+
+.menu nav a:nth-child(5) {
+    transition: transform 1300ms ease-in-out;
+}
+
+.menu nav hr:nth-child(6) {
+    transition: transform 1450ms ease-in-out;
+}
+
+.menu nav a:nth-child(7) {
+    transition: transform 1600ms ease-in-out;
+}
+
+.menu nav a.abierto,
+.menu nav hr.abierto {
+    transform: translateX(0);
+}
+
+
 
 /* Layout */
 
