@@ -30,6 +30,11 @@ body {
     color: #67666e;
 }
 
+h1 {
+    font-size: 1.5rem;
+    padding-bottom: 1em;
+}
+
 p {
     padding-bottom: 1em;
 }
@@ -345,8 +350,20 @@ header.white nav a:hover {
     padding: 1rem;
 }
 
-#primera {
+.primera {
     margin-top: 100vh;
+}
+
+.primera-normal {
+    margin-top: 80px;
+}
+
+#primera,
+#legal,
+#cookies {
+    display: block;
+    margin-top: -80px;
+    padding-bottom: 80px;
 }
 
 .columna {
@@ -400,16 +417,23 @@ footer p:first-child {
     font-weight: bold;
 }
 
-footer p.rrss {
+footer p.justificados {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-footer p.rrss img {
+footer p.justificados img {
     height: 48px;
     margin: 12px;
 }
 
+footer a {
+    font-size: 0.8rem;
+    color: #d39c66;
+}
 
+footer a:hover {
+    color: #a97c50;
+}
