@@ -39,6 +39,12 @@ p.centrador {
     align-items: center;
 }
 
+p.copyright {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 img.responsive {
     max-width: 100%;
 }
@@ -183,6 +189,45 @@ header.white nav a:hover {
     color: white;
 }
 
+/* Menú */
+
+.menu {
+    width: 360px;
+    height: 100vh;
+    background-color: #424242;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu nav {
+    margin-top: 80px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu nav a {
+    padding: 0.6em 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.menu nav a.activo,
+.menu nav a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.menu nav hr {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 0.5px;
+    width: 50%;
+}
+
 /* Layout */
 
 .fila {
@@ -232,6 +277,10 @@ footer {
     background-color: #424242;
 }
 
+footer .columna:nth-child(3) {
+    justify-content: space-between;
+}
+
 footer p {
     color: #ffffffe6;
     padding-bottom: 0.5em;
@@ -241,3 +290,17 @@ footer p:first-child {
     color: #a97c50;
     font-weight: bold;
 }
+
+footer p.rrss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p.rrss img {
+    height: 48px;
+    margin: 12px;
+}
+
+
