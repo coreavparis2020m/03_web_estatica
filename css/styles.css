@@ -56,6 +56,11 @@ p.copyright {
     font-size: 0.8rem;
 }
 
+a {
+    color: #a97c50;
+    font-weight: bold;
+}
+
 img.responsive {
     max-width: 100%;
 }
@@ -402,6 +407,15 @@ header.white nav a:hover {
     padding-bottom: 80px;
 }
 
+.fila.parallax {
+    background-image: url('../img/property5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2rem;
+}
+
 .columna {
     display: flex;
     flex-direction: column;
@@ -418,6 +432,14 @@ header.white nav a:hover {
     flex: 3;
 }
 
+.fila.parallax .columna {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #a97c50;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+}
+
 .m-l-small {
     margin-left: 0.5em;
 }
@@ -432,6 +454,11 @@ header.white nav a:hover {
         padding: 0 1rem 1rem;
     }
 
+    .fila.parallax {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
     .columna {
         padding: 0 1rem 1rem;
     }
@@ -442,8 +469,18 @@ header.white nav a:hover {
         padding: 0 0.5rem 0.5rem;
     }
 
+    .fila.parallax {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
     .columna {
         padding: 0 0.5rem 0.5rem;
+    }
+
+    .fila.parallax .columna {
+        padding: 0.5rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -464,6 +501,16 @@ form .columna.izquierda {
 
 form .columna.derecha {
     align-items: flex-end;
+}
+
+@media (max-width: 720px) {
+
+    form .columna.izquierda {
+        align-items: center;
+    }
+    form .columna.derecha {
+        align-items: center;
+    }
 }
 
 input {
@@ -501,7 +548,7 @@ input[type="checkbox"]:checked + label::before {
 }
 
 input[type="checkbox"] + label {
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
 }
 
