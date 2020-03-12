@@ -25,6 +25,12 @@ html {
     font-size: 20px;
 }
 
+@media (max-width: 440px) {
+    html {
+        font-size: 18px;
+    }
+}
+
 body {
     font-family: "Avenir", sans-serif;
     color: #67666e;
@@ -145,6 +151,36 @@ img.responsive {
     width: 100%;
     height: auto;
     animation: intermitente infinite 2.5s;
+}
+
+@media (max-width: 920px) {
+    .hero .hero-logo {
+        width: 40%;
+    }
+
+    .hero .hero-down {
+        width: 10%;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero .hero-logo {
+        width: 60%;
+    }
+
+    .hero .hero-down {
+        width: 15%;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero .hero-logo {
+        width: 80%;
+    }
+
+    .hero .hero-down {
+        width: 20%;
+    }
 }
 
 /* Header */
@@ -393,6 +429,21 @@ header.white nav a:hover {
 @media (max-width: 720px) {
     .fila {
         flex-direction: column;
+        padding: 0 1rem 1rem;
+    }
+
+    .columna {
+        padding: 0 1rem 1rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .fila {
+        padding: 0 0.5rem 0.5rem;
+    }
+
+    .columna {
+        padding: 0 0.5rem 0.5rem;
     }
 }
 
@@ -436,4 +487,26 @@ footer a {
 
 footer a:hover {
     color: #a97c50;
+}
+
+@media (max-width: 720px) {
+    footer {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    footer .columna {
+        padding: 0.5rem;
+    } 
+}
+
+@media (max-width: 440px) {
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    footer p.justificados img {
+        height: 36px;
+        margin: 10px;
+    }
 }
