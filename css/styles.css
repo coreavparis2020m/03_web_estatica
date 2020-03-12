@@ -233,6 +233,8 @@ header img {
 }
 
 header nav a {
+    color: #67666e;
+    font-weight: normal;
     margin-left: 1em;
     transition: 300ms ease-in-out;
 }
@@ -434,6 +436,12 @@ header.white nav a:hover {
 
 .columna.centrada {
     align-items: center;
+}
+
+.columna.rejilla {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .columna.x2 {
@@ -658,4 +666,21 @@ footer a:hover {
 .nav-box a:hover {
     background-color: #a97c50;
     color: white;
+}
+
+/* Tarjetas */
+
+.card {
+    width: 320px;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.card img {
+    height: 320px;
 }
