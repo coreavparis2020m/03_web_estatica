@@ -508,6 +508,10 @@ header.white nav a:hover {
     height: 28px;
 }
 
+.fila.propiedad1 .ficha button {
+    align-self: flex-end;
+}
+
 .m-l-small {
     margin-left: 0.5em;
 }
@@ -778,4 +782,78 @@ footer a:hover {
 
 .footer-card a:hover {
     background-color: #6e4d2c;
+}
+
+/* Carrusel */
+
+.carousel {
+    display: none;
+    margin: 0 auto;
+    width: 90%;
+    height: 90vh;
+    text-align: center;
+    position: fixed;
+    top: 5vh;
+    left: 5%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .slide {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+.carousel .slide img {
+    width: 100%;
+}
+
+.carousel .x-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.carousel .arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel .arrow-left img {
+    display: block;
+    height: 50px;
+}
+
+.carousel .arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel .arrow-right img {
+    display: block;
+    height: 50px;
 }
