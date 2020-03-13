@@ -65,6 +65,33 @@ img.responsive {
     max-width: 100%;
 }
 
+.logo-hr {
+    height: 125px;
+    width: 100%;
+    border: none;
+    position: relative;
+}
+
+.logo-hr:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #d39c66, transparent);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.logo-hr:after {
+    content: url('../img/logo-round.svg');
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translateX(-50%);
+}
+
 /* Hero */
 
 @keyframes heroAnimation {
@@ -507,6 +534,10 @@ header.white nav a:hover {
     .columna.izquierda,
     .columna.derecha {
         align-items: center;
+    }
+
+    .fila.propiedad1 .columna.ficha {
+        padding: 1rem;
     }
 }
 
