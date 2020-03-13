@@ -418,6 +418,13 @@ header.white nav a:hover {
     padding: 2rem;
 }
 
+.fila.propiedad1 {
+    background-image: url('../img/property5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .columna {
     display: flex;
     flex-direction: column;
@@ -458,6 +465,20 @@ header.white nav a:hover {
     color: #a97c50;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 2rem;
+}
+
+.fila.propiedad1 .ficha {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.fila.propiedad1 .ficha p {
+    display: flex;
+    align-items: center;
+}
+
+.fila.propiedad1 .ficha p img {
+    width: 28px;
+    height: 28px;
 }
 
 .m-l-small {
@@ -671,16 +692,59 @@ footer a:hover {
 /* Tarjetas */
 
 .card {
+    margin: 1rem;
     width: 320px;
+    min-width: 320px;
     border-radius: 0.5rem;
     box-shadow: 2px 2px 4px grey;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+}
 
+@media (max-width: 440px) {
+    .card {
+        margin: 1rem 0.5rem;
+    }
 }
 
 .card img {
     height: 320px;
+}
+
+.footer-card {
+    padding: 0.8rem;
+    width: 100%;
+    height: 174px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-card p {
+    padding-bottom: 0.5em;
+}
+
+.footer-card p:first-child {
+    font-weight: bold;
+}
+
+.footer-card a {
+    align-self: flex-end;
+    border: none;
+    background-color: #a97c50;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: 400ms all ease-in-out;
+}
+
+.footer-card a:hover {
+    background-color: #6e4d2c;
 }
